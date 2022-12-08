@@ -41,4 +41,14 @@ describe('Event /> component', () => {
   test('renders collapsed state as default', () => {
     expect(EventWrapper.state('collapsed')).toBe(true);
   });
+
+  test('expand details, when clicking show details', () => {
+    const detailsButton = EventWrapper.find('button.details-button');
+    expect(detailsButton.text()).toBe('show details');
+    expect(EventWrapper.find('h2.about')).toHaveLength(0);
+    expect(EventWrapper.find('a.link')).toHaveLength(0);
+    expect(EventWrapper.find('p.description')).toHaveLength(0);
+    detailsButton.simulate('click');
+    expect(EventWrapper.state('collapsed')).toBe(false);
+  });
 })
