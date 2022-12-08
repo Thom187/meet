@@ -19,4 +19,10 @@ describe('Event /> component', () => {
     expect(summary).toHaveLength(1);
     expect(summary.text()).toBe(event.summary);
   });
+
+  test('renders the start details', () => {
+    const eventStart = EventWrapper.find('p.event-start');
+    expect(eventStart).toHaveLength(1);
+    expect(eventStart.text()).toBe(new Date(event.start.dateTime).toString());
+  });
 })
