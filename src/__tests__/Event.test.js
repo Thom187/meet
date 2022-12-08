@@ -37,4 +37,8 @@ describe('Event /> component', () => {
     expect(detailsButton).toHaveLength(1);
     expect(detailsButton.text()).toBe('show details');
   });
+
+  test('renders collapsed state as default', () => {
+    expect(EventWrapper.state('collapsed')).toBe(true);
+  });
 })
