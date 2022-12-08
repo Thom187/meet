@@ -11,6 +11,7 @@ class Event extends Component {
 
   render() {
     const { event } = this.props;
+    const { collapsed } = this.state;
 
     return (
       <div>
@@ -23,6 +24,9 @@ class Event extends Component {
         <p className='event-location'>
           {`@${event.summary} | ${event.location}`}
         </p>
+        <button className='details-button' onClick={() => this.toggleDetails()}>
+          {collapsed ? 'show' : 'hide'} details
+        </button>
       </div>
     );
   }
