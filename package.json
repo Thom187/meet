@@ -58,6 +58,6 @@
     "fsevents": "^2.3.2",
     "gh-pages": "^4.0.0",
     "jest-cucumber": "^3.0.1",
-    "puppeteer": "^19.4.0"
+    "puppeteer": "^18.1.0"
   }
 }
