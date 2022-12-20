@@ -30,7 +30,7 @@ class Event extends Component {
             <h2 className='about'>
               About event:
             </h2>
-            <a className='link' href={event.htmlLink} target='_blank'>
+            <a className='link' href={event.htmlLink} target='_blank' rel='noopener noreferrer'>
               See details on Google Calendar
             </a>
             <p className='description'>
