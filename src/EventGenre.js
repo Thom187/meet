@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 const EventGenre = ({ events }) => {
 
   const getData = () => {
-    const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
+    const genres = ['React', 'JavaScript', 'Node.js', 'jQuery', 'AngularJS'];
     const data = genres.map((genre) => {
       const value = events.filter((event) => event.summary.split(' ').includes(genre)).length;
       return { name: genre, value };
@@ -24,8 +24,8 @@ const EventGenre = ({ events }) => {
       <PieChart width={400} height={400}>
         <Pie
           data={data}
-          cx={200}
-          cy={200}
+          cx='50%'
+          cy='50%'
           labelLine={false}
           outerradius={80}
           fill='#8884d8'
