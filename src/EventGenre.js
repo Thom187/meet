@@ -3,21 +3,19 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 const EventGenre = ({ events }) => {
 
-  const getData = () => {
-    const genres = ['React', 'JavaScript', 'Node.js', 'jQuery', 'AngularJS'];
-    const data = genres.map((genre) => {
-      const value = events.filter((event) => event.summary.split(' ').includes(genre)).length;
-      return { name: genre, value };
-    });
-    return data;
-  }
-
   const [data, setData] = useState([]);
+  const colors = ['#52d726', '#ffeC00', '#ff0000', '#007ed6', '#7cdddd', '#000', '#8f3515', '#a0a598', '#e9ca2a', '#185c6a'];
   useEffect(() => {
+    const getData = () => {
+      const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS', 'Node.js', 'Angular', 'AngularJS-Remote', 'jQuery,', 'JavaScript!!'];
+      const data = genres.map(genre => {
+        const value = events.filter(event => event.summary.split(' ').includes(genre)).length
+        return { name: genre, value };
+      })
+      return data;
+    };
     setData(() => getData());
   }, [events]);
-
-  const colors = ['#52d726', '#ffeC00', '#ff0000', '#007ed6', '#7cdddd'];
 
   return (
     <ResponsiveContainer height={400}>
