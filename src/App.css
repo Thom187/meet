@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  padding: 2% 5%;
+  padding: 2% 2%;
 }
 
 .App * {
@@ -20,6 +20,23 @@ p {
 
 .display-none {
   display: none;
+}
+
+h3 {
+  margin: 1%;
+}
+
+.filters {
+  margin: 4%;
+}
+
+.CitySearch {
+  margin: 2%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
 }
 
 .showSuggestions {
