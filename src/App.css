@@ -227,6 +227,8 @@ input[type="number"] {
 @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .data-vis-wrapper .recharts-responsive-container {
