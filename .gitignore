@@ -27,3 +27,4 @@ yarn-error.log*
 
 # Serverless directories
 .serverless
+.env
